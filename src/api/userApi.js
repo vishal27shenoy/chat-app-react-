@@ -17,3 +17,8 @@ export const getNotification = (id, token) => {
     `${process.env.REACT_APP_BASE_URL}/user/requests?userId=${id}`
   );
 };
+
+export const searchUser = (value, token) => {
+  axios.defaults.headers.Authorization = `Bearer ${token}`;
+  return axios.get(`${process.env.REACT_APP_BASE_URL}/user?search=${value}`);
+};

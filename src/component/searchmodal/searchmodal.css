@@ -56,6 +56,8 @@
 .allUserHolder {
     flex: 1;
     overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
 }
 
 .searchmodalCloseIconContainer {
@@ -70,4 +72,58 @@
 
 .searchModelcloseIcon {
     color: var(--maintext);
+}
+
+.searchUserCardContainer {
+    display: flex;
+}
+
+.searchUserCardContainer {
+    border: solid lightgray 1px;
+    width: 100%;
+    align-self: center;
+    background-color: var(--oppositeuser);
+    display: flex;
+    align-items: center;
+    padding-inline: 1rem;
+    border-radius: .5rem;
+    height: 5rem;
+    margin-top: .5rem;
+}
+
+.searchImgHolder {
+    display: flex;
+    align-items: center;
+}
+
+.searchImg {
+    height: 4rem;
+    border-radius: 50%;
+    width: 4rem;
+
+}
+
+.userInfoContainer {
+    margin-left: 2rem;
+}
+
+.userInfoContainer :first-child {
+    font-size: 1.5rem;
+    color: var(--maintext);
+}
+
+.userInfoContainer :last-child {
+    font-size: 1rem;
+    color: gray;
+}
+
+.userRequestBtn {
+    padding-inline: 2rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    outline: none;
+    color: white;
+    border-radius: .5rem;
+    margin-left: auto;
+    background-color: rgb(68, 68, 252);
 }

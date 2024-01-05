@@ -4,7 +4,7 @@ import logo from "../../assets/images/profile.jpeg";
 import { AppContext } from "../../contextapi/Context";
 const UserCard = ({ props }) => {
   const { setSelectedUser } = useContext(AppContext);
-  // console.log(props)
+
   return (
     <div className="usercardContainer" onClick={() => setSelectedUser(props)}>
       <div className="usercardImgContainer">

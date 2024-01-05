@@ -17,7 +17,7 @@ const Register = () => {
   const mutation = useMutation({
     mutationFn: signup,
     onSuccess: (res) => {
-      console.log(res)
+
       setAuth({
         _id: res?.data.id,
         userName: res?.data?.userName,
@@ -28,10 +28,10 @@ const Register = () => {
       if (res?.status == 200) {
         navigate("/home");
       }
-      queryClient.invalidateQueries({ queryKey: ['todos'] })// to call another queries 
+      // queryClient.invalidateQueries({ queryKey: ['todos'] })// to call another queries 
     },
     onError: (err) => {
-      console.log(err);
+
       toast.error(err?.response?.data?.error, {
         position: "top-right",
         autoClose: 5000,
@@ -56,7 +56,7 @@ const Register = () => {
         userName, email, password
       })
     } else {
-      console.log("came")
+
       toast.error(isCorrect, {
         position: "top-right",
         autoClose: 5000,

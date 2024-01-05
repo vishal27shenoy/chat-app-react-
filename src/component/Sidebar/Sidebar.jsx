@@ -15,7 +15,7 @@ import Badge from '@mui/material/Badge';
 const Sidebar = () => {
   const { changeTheme, setSearchModal, auth, userContacts, userGroups, userNotification } = useContext(AppContext);
   const [isDark, setIsDark] = useState(true);
-  // console.log(userContacts, userGroups)
+
   return (
     <div className="sidebarContainer">
       <div className="sidebarInfoCOntainer">
@@ -48,7 +48,6 @@ const Sidebar = () => {
         <div className="allUserDisplay">
           {
             userContacts?.map((item) => {
-              { console.log(item) }
               return <UserCard props={item} />
             })
           }

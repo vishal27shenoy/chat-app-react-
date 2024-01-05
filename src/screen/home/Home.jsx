@@ -13,12 +13,11 @@ const Home = () => {
     setUserGroup(groupQuery?.data?.data?.data?.userGroups);
     const notificationQuery = useQuery({ queryKey: ['notification'], queryFn: () => getNotification(auth?._id, auth?.accessToken) });
     setUserNotification(notificationQuery?.data?.data?.data?.userRequests)
-    console.log(auth)
+
     return (
         <div className='appContainer'>
             {searchModal && <SearchModal />}
             <Sidebar />
-
             {selectedUser !== false && < Chatbox />}
         </div>
     )

@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import './groupcard.css';
 import { AppContext } from '../../contextapi/Context';
 const GroupCard = ({ item }) => {
-    // console.log(item)
+
     const { setSelectedUser } = useContext(AppContext);
     let groupIcon = "https://cdn.icon-icons.com/icons2/3005/PNG/512/people_group_icon_188185.png";
     return (

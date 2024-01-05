@@ -18,25 +18,23 @@ const Login = () => {
   const mutation = useMutation({
     mutationFn: signin,
     onSuccess: (res) => {
-      console.log(res);
 
       setAuth({
-        _id: res?.data.id,
+        _id: res?.data?.id,
         userName: res?.data?.userName,
         email: res?.data?.email,
         profileUrl: res?.data?.profileUrl,
         accessToken: res?.data?.accessToken
       });
 
-      console.log(auth);
+
       if (res?.status == 200) {
         navigate("/home");
-        console.log("came");
+
       }
       // queryClient.invalidateQueries({ queryKey: ['todos'] })// to call another queries
     },
     onError: (err) => {
-      console.log(err);
       toast.error(err?.response?.data?.message, {
         position: "top-right",
         autoClose: 5000,
@@ -86,7 +84,6 @@ const Login = () => {
   useEffect(() => {
     localStorage.setItem("persist", persist);
   }, [persist]);
-  console.log(persist)
   return (
     <div className="loginContainer">
       <ToastContainer />
