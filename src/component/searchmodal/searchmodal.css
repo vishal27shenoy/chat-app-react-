@@ -1,0 +1,73 @@
+.searchmodalContainer {
+    height: 60%;
+    width: 50%;
+    background-color: var(--acent);
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.closeBtnContainer {
+    margin-left: auto;
+}
+
+.inputandCloseContainer {
+    display: flex;
+    padding-inline: 2rem;
+    margin-top: 2rem;
+    align-items: center;
+    gap: 1rem;
+}
+
+.searchinputHolder {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    flex: 1;
+    background-color: var(--oppositeuser);
+    padding-inline: 2rem;
+    border-radius: 4rem;
+}
+
+.searchinputHolder>input {
+    color: var(--maintext);
+    flex: 1;
+    height: 90%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+
+.allUserContainer {
+    display: flex;
+    flex: 1;
+    padding-top: 1rem;
+    padding: 2rem;
+}
+
+
+
+.allUserHolder {
+    flex: 1;
+    overflow-y: scroll;
+}
+
+.searchmodalCloseIconContainer {
+    display: flex;
+    align-items: center;
+    background-color: var(--oppositeuser);
+    justify-content: center;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+}
+
+.searchModelcloseIcon {
+    color: var(--maintext);
+}

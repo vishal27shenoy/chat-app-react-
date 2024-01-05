@@ -1,0 +1,138 @@
+.chatboxContainer {
+    width: 70%;
+    height: 100vh;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.oppositeuserContainer {
+    padding: 1rem;
+    width: 100%;
+    /* background-color: var(--acent); */
+    background-color: var(--oppositeuser);
+    border-radius: 2rem;
+    display: flex;
+
+    flex-direction: column;
+}
+
+.oppositeusernamecontainer p:nth-child(1) {
+    color: var(--maintext);
+}
+
+.oppositeuserimgcontainer {}
+
+.oppositeuserimgHolder {
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    object-fit: cover;
+}
+
+.oppositeuserinfoContainer {
+    padding: 1rem;
+    display: flex;
+
+}
+
+.oppositeusernamecontainer {
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.oppositeusernamecontainer p:nth-child(1) {
+    font-size: 1.5rem;
+}
+
+.oppositeusernamecontainer p:nth-child(2) {
+    font-size: 1rem;
+    color: gray;
+}
+
+.phoneandcameraicon {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    gap: 1rem;
+}
+
+.phoneIconHolder,
+.cameraiconholder {
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--acent);
+
+}
+
+.inputmessgaeContainer {
+    height: 5rem;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 5rem;
+    background-color: var(--secondary);
+    margin-top: auto;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+}
+
+.messageInput {
+    background-color: transparent;
+    width: calc(100% - 5rem);
+    outline: none;
+    border: none;
+    height: 100%;
+    color: var(--maintext);
+    text-indent: 2rem;
+}
+
+.sendBtnholder {
+    margin-left: auto;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: none;
+    background-color: #2680eb;
+}
+
+.bothusersmessageContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+.alignLeft {
+    align-self: flex-start;
+    padding: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    background-color: var(--oppositeuser);
+    margin: 1rem;
+
+}
+
+.alignRight {
+    align-self: flex-end;
+    background-color: var(--oppositeuser);
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    background-color: var(--oppositeuser);
+    margin: 1rem;
+    padding: 1rem;
+}

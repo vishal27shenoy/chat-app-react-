@@ -1,0 +1,107 @@
+.sidebarContainer {
+    height: 100vh;
+    width: 30%;
+    min-width: 30rem;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.sidebarInfoCOntainer {
+    display: flex;
+    align-items: center;
+}
+
+.imgHolder {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+}
+
+.actionBtnContainer {
+    margin-left: auto;
+    gap: .5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nameemailContainer {
+    margin-left: 2rem;
+}
+
+.nameemailContainer p:nth-child(1) {
+    color: var(--maintext);
+}
+
+.nameemailContainer p:nth-child(2) {
+    color: var(--subtext);
+}
+
+.imageContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.userContactContainer {
+    margin-top: auto;
+    height: calc(100vh - 4rem - 3rem);
+    background: var(--secondary);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.searchContainer {
+    height: 4rem;
+    width: 100%;
+    border-radius: 4rem;
+    background-color: var(--oppositeuser);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.inputHolder {
+    width: 90%;
+    height: 100%;
+    outline: none;
+    border: none;
+    background: transparent;
+    text-indent: 2rem;
+    color: var(--maintext)
+}
+
+.allUserDisplay {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-top: 1rem;
+    overflow-y: scroll;
+}
+
+.allUserDisplay::-webkit-scrollbar {
+    display: none;
+}
+
+.sidebarBarHolder {
+    position: relative;
+}
+
+.sidebarBarHolder::before {
+    content: attr(data-count);
+    position: absolute;
+    top: -0.75rem;
+    right: -0.50rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: rgb(244, 70, 70);
+    color: white;
+    font-size: 8px;
+}

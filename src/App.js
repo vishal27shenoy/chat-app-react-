@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Sidebar from "./component/Sidebar/Sidebar";
+import Chatbox from "./component/chatbox/Chatbox";
+import { AppContextProvider } from "./contextapi/Context";
+import Register from "./screen/Register screen/Register";
+import Login from "./screen/login/Login";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { QueryClient, QueryClientProvider, useQuery } from "react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import Home from "./screen/home/Home";
+import RequireAuth from "./auth/RequireAuth";
+import PersistLogin from "./auth/PersistLogin";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContextProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<PersistLogin />}>
+            <Route path="/" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+
+            <Route element={<RequireAuth />}>
+              <Route path="/home" element={<Home />} />
+            </Route>
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </AppContextProvider>
   );
 }
 
